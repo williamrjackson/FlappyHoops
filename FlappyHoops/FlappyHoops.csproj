@@ -224,7 +224,7 @@
     <Compile Include="Assets\Scripts\FlappyMove.cs" />
     <Compile Include="Assets\Scripts\GameManager.cs" />
     <Compile Include="Assets\Scripts\Hoop.cs" />
-    <Compile Include="Assets\Scripts\PositionAtScreenBottom.cs" />
+    <Compile Include="Assets\Scripts\PositionOnScreen.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Target Name="GenerateTargetFrameworkMonikerAttribute" />

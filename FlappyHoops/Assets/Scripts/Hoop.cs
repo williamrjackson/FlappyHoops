@@ -20,12 +20,6 @@ public class Hoop : MonoBehaviour {
 
     private bool hasSpawned = false;
     private Hoop spawnHoop;
-    // Use this for initialization
-    void Start () {
-        particle1.Stop();
-        particle2.Stop();
-        particle3.Stop();
-    }
 
     // Update is called once per frame
     void Update () {
@@ -37,6 +31,7 @@ public class Hoop : MonoBehaviour {
         if (!hasSpawned && ball.position.x > transform.position.x + spawnRange)
         {
             GameObject spawn = Instantiate(gameObject);
+            spawn.GetComponent<PositionOnScreen>().enabled = false;
             spawn.transform.position = new Vector3(transform.position.x + 5f, Random.Range(-2, 2), 0f);
             spawnHoop = spawn.GetComponent<Hoop>();
             spawnHoop.index = index + 1;
@@ -46,12 +41,11 @@ public class Hoop : MonoBehaviour {
     }
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (throughTrigger.GetHasCollided())
+        if (throughTrigger.GetHasCollided() && spawnHoop != null)
         {
             if (!rim1.GetHasCollided() && !rim2.GetHasCollided())
             {
-                if (spawnHoop != null)
-                    spawnHoop.consecutiveCount = consecutiveCount + 1;
+                spawnHoop.consecutiveCount = consecutiveCount + 1;
 
                 if (spawnHoop.consecutiveCount == 2)
                 {
@@ -77,8 +71,8 @@ public class Hoop : MonoBehaviour {
             }
             else
             {
-                if (spawnHoop != null)
-                    spawnHoop.consecutiveCount = 1;
+                print("I'm Here");
+                spawnHoop.consecutiveCount = 1;
                 GameManager.instance.ChangeScore(2);
                 particle1.Stop();
                 particle2.Stop();

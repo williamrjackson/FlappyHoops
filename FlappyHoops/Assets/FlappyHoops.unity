@@ -194,8 +194,8 @@ ParticleSystem:
   simulationSpeed: 1
   stopAction: 0
   looping: 1
-  prewarm: 0
-  playOnAwake: 1
+  prewarm: 1
+  playOnAwake: 0
   useUnscaledTime: 0
   autoRandomSeed: 1
   useRigidbodyForVelocity: 1
@@ -243,7 +243,7 @@ ParticleSystem:
   moveWithTransform: 1
   moveWithCustomTransform: {fileID: 0}
   scalingMode: 1
-  randomSeed: 1192604996
+  randomSeed: 153130350
   InitialModule:
     serializedVersion: 3
     enabled: 1
@@ -395,7 +395,7 @@ ParticleSystem:
     startSize:
       serializedVersion: 2
       minMaxState: 0
-      scalar: 0.1
+      scalar: 0.3
       minScalar: 1
       maxCurve:
         serializedVersion: 2
@@ -3608,8 +3608,8 @@ ParticleSystem:
   simulationSpeed: 1
   stopAction: 0
   looping: 1
-  prewarm: 0
-  playOnAwake: 1
+  prewarm: 1
+  playOnAwake: 0
   useUnscaledTime: 0
   autoRandomSeed: 1
   useRigidbodyForVelocity: 1
@@ -3657,7 +3657,7 @@ ParticleSystem:
   moveWithTransform: 1
   moveWithCustomTransform: {fileID: 0}
   scalingMode: 1
-  randomSeed: 1894209396
+  randomSeed: -205995733
   InitialModule:
     serializedVersion: 3
     enabled: 1
@@ -7090,7 +7090,7 @@ RectTransform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 524481996}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 297.5, y: 203, z: 0}
+  m_LocalPosition: {x: 362, y: 203, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 1941375531}
@@ -7244,6 +7244,7 @@ GameObject:
   - component: {fileID: 1051917181}
   - component: {fileID: 1051917180}
   - component: {fileID: 1051917184}
+  - component: {fileID: 1051917185}
   m_Layer: 0
   m_Name: Ball
   m_TagString: Untagged
@@ -7364,6 +7365,20 @@ CircleCollider2D:
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
   m_Radius: 0.425
+--- !u!114 &1051917185
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1051917179}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7325813eb2100634184d6d45dbbe514f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  xOffset: 0.35
+  yOffset: 0.5
+  onUpdate: 0
 --- !u!1 &1117626238
 GameObject:
   m_ObjectHideFlags: 0
@@ -7375,6 +7390,7 @@ GameObject:
   - component: {fileID: 1117626239}
   - component: {fileID: 1117626242}
   - component: {fileID: 1117626241}
+  - component: {fileID: 1117626243}
   m_Layer: 0
   m_Name: Hoop
   m_TagString: Untagged
@@ -7489,6 +7505,20 @@ MonoBehaviour:
   particle3: {fileID: 52358362}
   index: 0
   consecutiveCount: 1
+--- !u!114 &1117626243
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1117626238}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7325813eb2100634184d6d45dbbe514f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  xOffset: 0.7
+  yOffset: 0.5
+  onUpdate: 0
 --- !u!1 &1432224424
 GameObject:
   m_ObjectHideFlags: 0
@@ -7516,7 +7546,7 @@ Transform:
   m_GameObject: {fileID: 1432224424}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: -4.8, z: 10.150391}
-  m_LocalScale: {x: 31.14, y: 1, z: 1}
+  m_LocalScale: {x: 88.283195, y: 0.9000133, z: 0.9000133}
   m_Children: []
   m_Father: {fileID: 457274934}
   m_RootOrder: 1
@@ -7935,8 +7965,8 @@ ParticleSystem:
   simulationSpeed: 1
   stopAction: 0
   looping: 1
-  prewarm: 0
-  playOnAwake: 1
+  prewarm: 1
+  playOnAwake: 0
   useUnscaledTime: 0
   autoRandomSeed: 1
   useRigidbodyForVelocity: 1
@@ -7984,7 +8014,7 @@ ParticleSystem:
   moveWithTransform: 1
   moveWithCustomTransform: {fileID: 0}
   scalingMode: 1
-  randomSeed: -1130574506
+  randomSeed: -1520887750
   InitialModule:
     serializedVersion: 3
     enabled: 1
@@ -8136,7 +8166,7 @@ ParticleSystem:
     startSize:
       serializedVersion: 2
       minMaxState: 0
-      scalar: 0.1
+      scalar: 0.2
       minScalar: 1
       maxCurve:
         serializedVersion: 2
@@ -11403,7 +11433,7 @@ Transform:
   m_GameObject: {fileID: 2048359227}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 4.74, z: 10.150391}
-  m_LocalScale: {x: 31.14, y: 1, z: 1}
+  m_LocalScale: {x: 88.283195, y: 0.9000133, z: 0.9000133}
   m_Children: []
   m_Father: {fileID: 457274934}
   m_RootOrder: 0

@@ -1,4 +1,5 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
@@ -6,8 +7,11 @@ using UnityEngine.UI;
 public class GameManager : MonoBehaviour {
     public static GameManager instance;
     public Text scoreOutput;
+
     private int score;
-    public bool isGameOver;
+    private bool isGameOver;
+
+    public Action OnGameOver;
 
     private void Awake()
     {
@@ -26,4 +30,19 @@ public class GameManager : MonoBehaviour {
         score += amount;
         scoreOutput.text = score.ToString();
     }
+    public void SetGameOver()
+    {
+        if (!isGameOver)
+        {
+            isGameOver = true;
+            if (OnGameOver != null)
+                OnGameOver();
+        }
+    }
+
+    public bool GetGameOver()
+    {
+        return isGameOver;
+    }
+
 }

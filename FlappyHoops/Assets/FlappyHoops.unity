@@ -243,7 +243,7 @@ ParticleSystem:
   moveWithTransform: 1
   moveWithCustomTransform: {fileID: 0}
   scalingMode: 1
-  randomSeed: 153130350
+  randomSeed: 1470446162
   InitialModule:
     serializedVersion: 3
     enabled: 1
@@ -7090,7 +7090,7 @@ RectTransform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 524481996}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 362, y: 203, z: 0}
+  m_LocalPosition: {x: 172.5, y: 203, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 1941375531}
@@ -7168,6 +7168,7 @@ GameObject:
   m_Component:
   - component: {fileID: 526120468}
   - component: {fileID: 526120469}
+  - component: {fileID: 526120470}
   m_Layer: 0
   m_Name: Wing
   m_TagString: Untagged
@@ -7232,6 +7233,18 @@ SpriteRenderer:
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
+--- !u!114 &526120470
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 526120467}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9eebea03861519b4bbb3ab22dc3ea1a1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  explodeForce: {x: 2.5, y: 2.5}
 --- !u!1 &1051917179
 GameObject:
   m_ObjectHideFlags: 0
@@ -7655,6 +7668,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1452413782}
   - component: {fileID: 1452413783}
+  - component: {fileID: 1452413784}
   m_Layer: 0
   m_Name: Wing (1)
   m_TagString: Untagged
@@ -7719,6 +7733,18 @@ SpriteRenderer:
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
+--- !u!114 &1452413784
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1452413781}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9eebea03861519b4bbb3ab22dc3ea1a1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  explodeForce: {x: -2.5, y: 2.5}
 --- !u!1 &1460136578
 GameObject:
   m_ObjectHideFlags: 0
@@ -7803,7 +7829,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   scoreOutput: {fileID: 1941375529}
-  isGameOver: 0
 --- !u!4 &1593437920
 Transform:
   m_ObjectHideFlags: 0

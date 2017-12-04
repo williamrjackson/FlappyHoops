@@ -26,7 +26,7 @@ public class FlappyMove : MonoBehaviour {
 
     // Update is called once per frame
     void Update () {
-        if (Input.GetButtonDown(m_Input) && !GameManager.instance.isGameOver)
+        if (Input.GetButtonDown(m_Input) && !GameManager.instance.GetGameOver())
         {
             Bump();
         }

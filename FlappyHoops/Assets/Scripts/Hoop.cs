@@ -25,7 +25,7 @@ public class Hoop : MonoBehaviour {
     void Update () {
 		if (ball.position.x > transform.position.x + passedRange)
         {
-            GameManager.instance.isGameOver = true;
+            GameManager.instance.SetGameOver();
         }
 
         if (!hasSpawned && ball.position.x > transform.position.x + spawnRange)
@@ -71,7 +71,6 @@ public class Hoop : MonoBehaviour {
             }
             else
             {
-                print("I'm Here");
                 spawnHoop.consecutiveCount = 1;
                 GameManager.instance.ChangeScore(2);
                 particle1.Stop();
@@ -82,7 +81,7 @@ public class Hoop : MonoBehaviour {
         }
         else
         {
-            GameManager.instance.isGameOver = true;
+            GameManager.instance.SetGameOver();
         }
         Destroy(gameObject);
     }

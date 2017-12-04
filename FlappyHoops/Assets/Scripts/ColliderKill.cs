@@ -10,7 +10,7 @@ public class ColliderKill : MonoBehaviour {
         if (collision.gameObject == ball)
         {
             //Kill Ball
-            GameManager.instance.isGameOver = true;
+            GameManager.instance.SetGameOver();
         }
     }
 }

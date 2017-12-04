@@ -222,6 +222,7 @@
     <Compile Include="Assets\Scripts\CameraFollow.cs" />
     <Compile Include="Assets\Scripts\ColliderKill.cs" />
     <Compile Include="Assets\Scripts\CollisionRecorder.cs" />
+    <Compile Include="Assets\Scripts\ExplodeWing.cs" />
     <Compile Include="Assets\Scripts\FlappyMove.cs" />
     <Compile Include="Assets\Scripts\GameManager.cs" />
     <Compile Include="Assets\Scripts\Hoop.cs" />

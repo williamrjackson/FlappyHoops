@@ -9,9 +9,9 @@ public class Hoop : MonoBehaviour {
     public Transform ball;
     public float passedRange;
     public float spawnRange;
-    public GameObject particle1;
-    public GameObject particle2;
-    public GameObject particle3;
+    public ParticleSystem particle1;
+    public ParticleSystem particle2;
+    public ParticleSystem particle3;
 
     [HideInInspector]
     public int index;
@@ -22,11 +22,13 @@ public class Hoop : MonoBehaviour {
     private Hoop spawnHoop;
     // Use this for initialization
     void Start () {
+        particle1.Stop();
+        particle2.Stop();
+        particle3.Stop();
+    }
 
-	}
-	
-	// Update is called once per frame
-	void Update () {
+    // Update is called once per frame
+    void Update () {
 		if (ball.position.x > transform.position.x + passedRange)
         {
             GameManager.instance.isGameOver = true;
@@ -54,23 +56,23 @@ public class Hoop : MonoBehaviour {
                 if (spawnHoop.consecutiveCount == 2)
                 {
                     GameManager.instance.ChangeScore(4);
-                    particle1.SetActive(true);
-                    particle2.SetActive(false);
-                    particle3.SetActive(false);
+                    particle1.Play();
+                    particle2.Stop();
+                    particle3.Stop();
                 }
                 else if (spawnHoop.consecutiveCount == 3)
                 {
                     GameManager.instance.ChangeScore(6);
-                    particle1.SetActive(false);
-                    particle2.SetActive(true);
-                    particle3.SetActive(false);
+                    particle1.Stop();
+                    particle2.Play();
+                    particle3.Stop();
                 }
                 else if (spawnHoop.consecutiveCount > 2)
                 {
                     GameManager.instance.ChangeScore(8);
-                    particle1.SetActive(false);
-                    particle2.SetActive(false);
-                    particle3.SetActive(true);
+                    particle1.Stop();
+                    particle2.Stop();
+                    particle3.Play();
                 }
             }
             else
@@ -78,9 +80,9 @@ public class Hoop : MonoBehaviour {
                 if (spawnHoop != null)
                     spawnHoop.consecutiveCount = 1;
                 GameManager.instance.ChangeScore(2);
-                particle1.SetActive(false);
-                particle2.SetActive(false);
-                particle3.SetActive(false);
+                particle1.Stop();
+                particle2.Stop();
+                particle3.Stop();
             }
 
         }

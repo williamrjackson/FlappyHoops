@@ -128,7 +128,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!199 &52358361
 ParticleSystemRenderer:
   serializedVersion: 4
@@ -243,7 +243,7 @@ ParticleSystem:
   moveWithTransform: 1
   moveWithCustomTransform: {fileID: 0}
   scalingMode: 1
-  randomSeed: 875066590
+  randomSeed: -1176969595
   InitialModule:
     serializedVersion: 3
     enabled: 1
@@ -3529,7 +3529,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &131711159
 Transform:
   m_ObjectHideFlags: 0
@@ -3657,7 +3657,7 @@ ParticleSystem:
   moveWithTransform: 1
   moveWithCustomTransform: {fileID: 0}
   scalingMode: 1
-  randomSeed: 1244073461
+  randomSeed: 1531809436
   InitialModule:
     serializedVersion: 3
     enabled: 1
@@ -7090,7 +7090,7 @@ RectTransform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 524481996}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 271.5, y: 203, z: 0}
+  m_LocalPosition: {x: 160.5, y: 203, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 1941375531}
@@ -7484,9 +7484,9 @@ MonoBehaviour:
   ball: {fileID: 1051917183}
   passedRange: 3
   spawnRange: -3
-  particle1: {fileID: 131711158}
-  particle2: {fileID: 1842519225}
-  particle3: {fileID: 52358360}
+  particle1: {fileID: 131711161}
+  particle2: {fileID: 1842519227}
+  particle3: {fileID: 52358362}
   index: 0
   consecutiveCount: 1
 --- !u!1 &1432224424
@@ -7500,6 +7500,7 @@ GameObject:
   - component: {fileID: 1432224427}
   - component: {fileID: 1432224426}
   - component: {fileID: 1432224428}
+  - component: {fileID: 1432224429}
   m_Layer: 0
   m_Name: Floor
   m_TagString: Untagged
@@ -7602,6 +7603,18 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   xOffset: 0.5
   yOffset: 0
+--- !u!114 &1432224429
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1432224424}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9bfd29da3ce377a4ba3679d9c80575e2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ball: {fileID: 1051917179}
 --- !u!1 &1452413781
 GameObject:
   m_ObjectHideFlags: 0
@@ -7855,7 +7868,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!199 &1842519226
 ParticleSystemRenderer:
   serializedVersion: 4
@@ -7970,7 +7983,7 @@ ParticleSystem:
   moveWithTransform: 1
   moveWithCustomTransform: {fileID: 0}
   scalingMode: 1
-  randomSeed: 1232014394
+  randomSeed: 24246013
   InitialModule:
     serializedVersion: 3
     enabled: 1
@@ -11312,7 +11325,7 @@ RectTransform:
   m_AnchorMin: {x: 0.5, y: 1}
   m_AnchorMax: {x: 0.5, y: 1}
   m_AnchoredPosition: {x: 0, y: -48.4}
-  m_SizeDelta: {x: 50, y: 50}
+  m_SizeDelta: {x: 250.61, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &2019708294
 GameObject:
@@ -11373,6 +11386,7 @@ GameObject:
   - component: {fileID: 2048359231}
   - component: {fileID: 2048359230}
   - component: {fileID: 2048359229}
+  - component: {fileID: 2048359232}
   m_Layer: 0
   m_Name: Roof
   m_TagString: Untagged
@@ -11475,3 +11489,15 @@ SpriteRenderer:
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
+--- !u!114 &2048359232
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 2048359227}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9bfd29da3ce377a4ba3679d9c80575e2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ball: {fileID: 1051917179}

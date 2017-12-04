@@ -243,7 +243,7 @@ ParticleSystem:
   moveWithTransform: 1
   moveWithCustomTransform: {fileID: 0}
   scalingMode: 1
-  randomSeed: -1176969595
+  randomSeed: 1192604996
   InitialModule:
     serializedVersion: 3
     enabled: 1
@@ -3657,7 +3657,7 @@ ParticleSystem:
   moveWithTransform: 1
   moveWithCustomTransform: {fileID: 0}
   scalingMode: 1
-  randomSeed: 1531809436
+  randomSeed: 1894209396
   InitialModule:
     serializedVersion: 3
     enabled: 1
@@ -7090,7 +7090,7 @@ RectTransform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 524481996}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 160.5, y: 203, z: 0}
+  m_LocalPosition: {x: 297.5, y: 203, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 1941375531}
@@ -7283,10 +7283,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Input: Fire1
-  m_VerticalBumpAmount: 8.5
+  m_VerticalBumpAmount: 10
   m_HorizontalBumpAmount: 2
   m_MaxSpeed: 3
-  m_GravityScale: 3
+  m_GravityScale: 3.5
   m_Animator: {fileID: 2019708296}
 --- !u!212 &1051917182
 SpriteRenderer:
@@ -7603,6 +7603,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   xOffset: 0.5
   yOffset: 0
+  onUpdate: 0
 --- !u!114 &1432224429
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -7983,7 +7984,7 @@ ParticleSystem:
   moveWithTransform: 1
   moveWithCustomTransform: {fileID: 0}
   scalingMode: 1
-  randomSeed: 24246013
+  randomSeed: -1130574506
   InitialModule:
     serializedVersion: 3
     enabled: 1
@@ -11420,6 +11421,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   xOffset: 0.5
   yOffset: 1
+  onUpdate: 0
 --- !u!61 &2048359230
 BoxCollider2D:
   m_ObjectHideFlags: 0
